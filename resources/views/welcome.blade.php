@@ -20,13 +20,13 @@
         @csrf
         <div class="row">
             <div class="col s6">
-                <input type="hidden" name="id_persona" id="id_persona" value="" required>
+                <input type="hidden" name="id_usuario" id="id_usuario" value="" required>
                 <div class="input-field col s12 m7">
-                    <label for="buscar">Buscar ticket:</label>
+                    <label for="buscar">Buscar C.I.:</label>
                     <input type="text" name="buscar" id="buscar">
                 </div>
                 <div class="input-field col s12 m12">
-                    <input style="text-align: center" type="text" name="persona" id="persona" disabled>
+                    <input style="text-align: center" type="text" name="usuario" id="usuario" disabled>
                 </div>
             </div>
         </div>
@@ -37,7 +37,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script>
         $(function (){
-            console.log('init');
+            $('#buscar').keyup( function(e){
+                let ticket=$('#buscar').val();
+                /*
+                if($('#buscar_te').val()) {   //verifica que el el campo no esté vacío
+                    e.preventDefault();
+                    let nombre = $('#buscar_te').val();
+                    $('#nombre_te').val('');
+                    $.ajax({
+                        url: '/encomienda/buscar/',
+                        type: 'GET',
+                        async: true,
+                        data: {
+                            id: nombre,
+                            _token: $('input[name="_token"]').val()
+                        },
+                        success: function (response){
+                            if(response==0){
+                                console.log('No llego nada');
+                            }else{
+                                var datas = JSON.parse(response);
+                                datas.forEach(data => {
+                                    let nombre_encomienda = "Encomienda: "+data.nombre+" "+data.precio_unit;
+                                    $('#id_tipo_encomienda').val(data.id);
+                                    $('#nombre_te').val(nombre_encomienda);
+                                    $('#total').val(data.precio_unit);
+                                })
+                            }
+                        },
+                        error: function (error){
+                        },
+                    })
+                }
+                 */
+            })
         });
 
     </script>
