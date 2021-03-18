@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<p>
+    Aplicación de Ajax con jquery en Laravel 7.
+</p>
+<p> Configuración:
+    
+        1.- Generar el archivo Vendor con el comando: composer install
+        2.- Copiar el archivo example.env pegando la copia en el mismo directorio dejando solo la extención .env .
+        3.- Configurar el nuevo .env con el gestor de base de datos de su preferencia, por defecto esta posgreSQL.
+        4.- Genere las migraciónes y seed.
+
+    El proyecto esta listo para su ejecución.
+ </p>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
