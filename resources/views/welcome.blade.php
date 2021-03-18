@@ -38,18 +38,16 @@
     <script>
         $(function (){
             $('#buscar').keyup( function(e){
-                let ticket=$('#buscar').val();
-                /*
-                if($('#buscar_te').val()) {   //verifica que el el campo no esté vacío
+                let id_usuario=$('#buscar').val();
+                console.log(id_usuario);
+                if($('#buscar').val()) {
                     e.preventDefault();
-                    let nombre = $('#buscar_te').val();
-                    $('#nombre_te').val('');
                     $.ajax({
-                        url: '/encomienda/buscar/',
+                        url: '/user/buscar',
                         type: 'GET',
                         async: true,
                         data: {
-                            id: nombre,
+                            codigo: id_usuario,
                             _token: $('input[name="_token"]').val()
                         },
                         success: function (response){
@@ -58,10 +56,8 @@
                             }else{
                                 var datas = JSON.parse(response);
                                 datas.forEach(data => {
-                                    let nombre_encomienda = "Encomienda: "+data.nombre+" "+data.precio_unit;
-                                    $('#id_tipo_encomienda').val(data.id);
-                                    $('#nombre_te').val(nombre_encomienda);
-                                    $('#total').val(data.precio_unit);
+                                $('#usuario').val(data.name);
+                                $('#id_usuario').val(data.id);
                                 })
                             }
                         },
@@ -69,7 +65,6 @@
                         },
                     })
                 }
-                 */
             })
         });
 
